@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+
+    Loading...
+    
+    <script>
+
+        setTimeout(() => {
+           changeEverything();
+        }, 3000);
+
+        function changeEverything() {
+            document.body.innerHTML = `
+            <h1 class="myH1" style="font-size: 100px;">Title</h1>
+            <p>This is a paragraph</p>
+            <button onclick="changeEverythingAgain()">Click</button>`;
+
+
+    document.querySelector('p').style.color = 'blue';
+    document.querySelector('.myH1').style.color = 'red';
+    document.querySelector('button').classList.add('active');
+        }
+
+        function changeEverythingAgain() {
+            document.body.innerHTML = `<h1 class="myH1" style="font-size: 100px;">Changed</h1>
+    <p>This is a paragraph was changed</p>
+    <button onclick="alert('You clicked me')">Click</button>`;
+
+
+    document.querySelector('p').style.color = 'blue';
+    document.querySelector('.myH1').style.color = 'red';
+    document.querySelector('button').classList.add('active');
+        }
+
+
+    </script> 
+</body>
+</html>
