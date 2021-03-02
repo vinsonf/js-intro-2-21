@@ -12,7 +12,7 @@ const thing1 = {
     innerHTML: 'string',
     property3: 1,
 };
-thing['1 properyt1']
+
 
 const array = [true, 'string', 1];
 
@@ -21,8 +21,8 @@ const array2 = {
     1: 'string',
     2: 1
 }
-array.0 // error
-array[0]
+
+
 
 const myProperty = 'property';
 
@@ -41,5 +41,10 @@ setTimeout(() => {
 setTimeout(()  => {
     document.querySelector('li').innerHTML = 'Goodbye';
 }, 5000)
+
+
+navigator.geolocation.getCurrentPosition(function(data) {
+    console.log(data.coords.latitude, data);
+})
 
 
