@@ -8,13 +8,13 @@
 </head>
 <body>
     <script>
-        let today = new Date();
-        console.log(today.getFullYear());
-        let birthday = new Date(prompt('what is your birthday'));
-        console.log(birthday.getFullYear());
-        let age = today.getFullYear() - birthday.getFullYear();
-        console.log('age', age);
-        let parentsPermission = true;
+        // let today = new Date();
+        // console.log(today.getFullYear());
+        // let birthday = new Date(prompt('what is your birthday'));
+        // console.log(birthday.getFullYear());
+        // let age = today.getFullYear() - birthday.getFullYear();
+        // console.log('age', age);
+        // let parentsPermission = true;
         
      
         // if (age > 17) {
@@ -26,14 +26,45 @@
         // } else {
         //     console.log('it is not true');
         // }
+        // let age = 15;
+        // if (age >= 18) {
+        //     console.log('it is true 1')
+        // } else if (age >= 13 && confirm('do you have parents permission')) {
+        //     console.log('it is true 2')
+        // }  else {
+        //     console.log('not true')
+        // }
 
-        if (age >= 18) {
-            console.log('it is true 1')
-        } else if (age >= 13 && confirm('do you have parents permission')) {
-            console.log('it is true 2')
-        }  else {
-            console.log('not true')
-        }
+
+        // Truthy / Falsey
+        //     let age = null;
+        // if (age) {
+        //     console.log('truthy')
+        // } else {
+        //     console.log('falsy');
+        // }
+
+
+        // false || true || false ? console.log('truthy') : console.log('falsy');
+
+            let age = 16;
+
+            switch (age) {
+                case 13:
+                    console.log('you need permission');
+                    break;
+                case 14:
+                    console.log('you still have 4 more years')
+                    break;
+                case 15:
+                    console.log('you are almost old enough')
+                    break;
+
+                case 18: 
+                    console.log('you are old enough');
+                default:
+                    console.log('default');
+            }
 
     </script>
 </body>
