@@ -2,7 +2,11 @@ let on = true;
 const onButton = document.querySelector('#on-button');
 const lessonsDiv = document.querySelector('#lessons');
 const stepsDiv = document.querySelector('#steps');
-const lessons = ['test'];
+const lessons = [
+    'test',
+    'overview',
+    'daily'
+];
 let editorInstance = null;
 let parsedUrl = new URL(window.location.href);
 let urlLesson = parsedUrl.searchParams.get('lesson');
