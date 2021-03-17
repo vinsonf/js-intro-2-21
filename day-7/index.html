@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+      <!-- <div id="item" class="cool">Hello World</div> -->
+        
+    </body>
+    
+    <script src="helper.js"></script>
+    <script src="chapters.js"></script>
+    <script src="story.js"></script>
+
+    <script>
+
+        console.log(document.getElementById('item'));
+        console.log(document.getElementsByTagName('div'))
+        console.log(document.getElementsByClassName('cool'));
+
+
+        console.log(document.querySelector('#item'));
+        console.log(document.querySelector('div'));
+        console.log(document.querySelector('.cool'));
+
+        console.log(document.querySelectorAll('#item'));
+        console.log(document.querySelectorAll('div'));
+        console.log(document.querySelectorAll('.cool'));
+
+
+
+        for(let i = 0; i < 10; i++) {
+            console.log('i', 'for', i);
+        }
+
+        let i = 10;
+        do {
+           console.log('i', 'do while', i);
+            i++;
+        } while(i < 10);
+
+
+        let b = 10;
+        while(b < 10) {
+            console.log('b', 'while', b);
+            b++;
+        }
+
+    </script>
+    
+
+    
+
+
+    
+
+    <style>
+
+        body {
+            display: grid;
+            grid-template-areas: "header header header header"
+                                 "sidemenu main main main"
+                                 "sidemenu main main main"
+                                 "sidemenu main main main"
+                                 "sidemenu main main main"
+                                 "sidemenu main main main"
+                                 "sidemenu main main main"
+                                 "footer footer footer footer";
+
+                                 height: 100vh;
+        }
+        header{
+        
+            background-color: rgb(149, 198, 240);
+            border: 10px solid black;
+            display: flex;
+            justify-content: space-between;
+            grid-area: header;
+        }
+
+        .logo {
+            height: 70px;
+            width: 70px;
+            background-color: blueviolet;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+
+        .profilePic {
+            height: 70px;
+            width: 70px;
+            background-color: green;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        nav {
+     
+    
+            border: solid 10px black;
+            display: inline-block;
+            grid-area: sidemenu;
+        }
+
+        a {
+            display: block;
+            margin: 10px;
+        }
+
+        .main {
+            background-color: brown;
+            display: inline-block;
+            grid-area: main;
+            border: 10px solid black;
+        }
+
+        .footer {
+            background-color: rgb(149, 198, 240);
+            border: 10px solid black;
+            display: flex;
+            justify-content: space-between;
+            grid-area: footer;
+        }
+    </style>
+</html>
