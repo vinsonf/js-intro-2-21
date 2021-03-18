@@ -7,6 +7,9 @@ class User {
         this.score = score;
     }
 
+    get message() {
+        return `Hello, my name is ${this.us}`;
+    }
     greet() {
         console.log('Hello,', 'my name is', this.username, '.');
     }
