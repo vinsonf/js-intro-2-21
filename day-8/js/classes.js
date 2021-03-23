@@ -22,6 +22,7 @@ class User {
     }
 
     getsPoints() {
+        
         this.score++;
         console.log(this);
         this.greet();
