@@ -4,14 +4,12 @@ let selectedItem = null;
 
 // Classes
 class Vehicle {
-    doors = 0;
-    tires = 0;
-    price = 0;
-    name = '';
-    constructor(doors, tires, price) {
+
+    constructor(doors = 0, tires = 0, price = 0) {
         this.doors = doors;
         this.tires = tires;
         this.price = price;
+        this.vin = Math.random() + '';
     }
     go() {
         console.log(this)
@@ -19,15 +17,19 @@ class Vehicle {
 }
 class Car extends Vehicle {
     name = 'car';
+    constructor(doors, tires, price, windshield) {
+        super(doors, tires, price)
+        this.windshield = windshield
+    }
+}
+class Truck extends Vehicle {
     constructor(doors, tires, price) {
         super(doors, tires, price)
     }
 }
-class Truck extends Vehicle {
-    name = 'truck';
-    constructor(doors, tires, price) {
-        super(doors, tires, price)
-    }
+
+class Diesel extends Truck {
+
 }
 class Motorcycle extends Vehicle {
     name = 'motorcycle';
@@ -102,6 +104,7 @@ form.addEventListener('submit', function(event) {
                         +inputDoors.value,
                         +inputTires.value,
                         +inputPrice.value,
+                        4,
                         )
                     )
                 break;
