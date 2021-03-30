@@ -1,12 +1,10 @@
-
+// get element references
 const player = document.querySelector('#player');
 const hole = document.querySelector('#hole');
 const scoreKeeper = document.querySelector('#scoreKeeper');
 const highscore = document.querySelector('#highscore');
 
 let highScore = localStorage.getItem('highScore') || 0;
-console.log('highScore', highScore);
-
 let flapping = false;
 let flapCount = 0;
 let score = 0;
@@ -20,7 +18,6 @@ document.addEventListener('keyup', function(event) {
 })
 
 setInterval( function() {
-    
     if (flapping) {
         if (flapCount < 4) {
             move(-6);
@@ -29,23 +26,16 @@ setInterval( function() {
         } else if (flapCount < 15) {
             move(-2);
         }
-     
         flapCount++;
         if (flapCount > 20) {
             flapCount = 0;
             flapping = false;
         }
-
-        
-
     } else {
         move(3);
     }
-
     hitDetection();
-  
 }, 10);
-
 
 hole.addEventListener('animationiteration', function() {
     const random = Math.random() * 300;
@@ -82,7 +72,6 @@ function getObjectStyles(element) {
         top: getStyle(element, 'top'),
         right: getStyle(element, 'left') + getStyle(element, 'width'),
         bottom: getStyle(element, 'top') + getStyle(element, 'height'),
-
     }
 }
 
@@ -94,7 +83,6 @@ function hitDetection() {
             playerData.top < holeData.top || 
             playerData.bottom > holeData.bottom
             ) {
-            console.log('player got hit')
             hit = true;
         }
     }
